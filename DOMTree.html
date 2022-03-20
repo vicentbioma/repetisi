@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Leasson</title>
+</head>
+
+<body>
+    <!--comment-->
+    <div id=`Hello` class="greet">
+        <!--propend-->
+        <!--node comment-->
+        Hello World
+        <div id="jalu"> oke oce </div>
+        <!--append-->
+    </div>
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <div class="text">World</div>
+    <div class="text apple">Apple</div>
+    <div class="text apple2">Jeruk</div>
+    <div id="test"></div>
+    <div id="world"></div>
+    <div></div>
+</body>
+<script>
+    // How to acces HTML
+    // Top Node
+    // let html = document.documentElement
+    // console.log(html)
+
+    // let body = document.body
+    // console.log(body)
+
+    // let head = document.head
+    // console.log(head)
+
+    // node vs element
+    // node include comment and text , element ==> <tag></tag>
+
+    // chillNodes
+    // let bodyNode = document.body.childNodes
+    // console.log(bodyNode)
+    // console.log(bodyNode[9])
+    // console.log(document.body.firstChild)
+    // console.log(document.body.lastChild)
+
+    // let bodyElement = document.body.children
+    // console.log(bodyElement)
+    // console.log(document.body.firstElementChild)
+    // console.log(document.body.lastElementChild)
+    // console.log(document.body.firstElementChild.nextElementSibling)
+    // console.log(document.body.firstElementChild.previousElementSibling)
+
+    // // searching get element
+    // let div = document.getElementById(`hello`) 
+    // console.log(div)
+
+    // get collection
+    // console.log(document.getElementsByTagName(`div`))
+    // console.log(document.getElementsByTagName(`div`)[2])
+    // console.log(document.getElementsByClassName('text'))
+    // console.log(document.getElementsByClassName(`apple`))
+    // console.log(document.getElementsByClassName(`apple2`))
+    // console.log(document.getElementsByClassName(`greet`))
+    // console.log(document.getElementById(`jalu`))
+    
+    
+    
+    // // how to manipulate in HTML
+    // let div2 = document.createElement(`div`)
+    // div2.innerHTML = `<b>new element</b>`
+    // //div <b>new element<b> div
+    // console.log(document.getElementsByClassName(`text`)[0])
+    // document.getElementsByClassName(`text`)[0].prepend(div2)
+
+    console.log(document.getElementsByClassName(`wolrd`).innerHTML)
+    console.log(document.getElementsByClassName(`hello`).textContent)
+    console.log(document.getElementById(`test`))
+    document.getElementById(`test`).innerHTML ="ini hasil edit pakai innerHTML"
+    console.log(document.getElementsByClassName(`text`)[0])
+    document.getElementsByClassName(`text`)[0].textContent = "Ini hasil edit pakai textContent"
+
+</script>
+</html> 

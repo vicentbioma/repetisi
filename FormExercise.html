@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <label>Name:</label>&emsp;&emsp;&emsp;
+    <input id="name" type="text">
+    <br>
+    <br>
+    <label>Price: </label>&emsp;
+    <input type="number" id="price">
+    <br>
+    <br>
+    <label>Condition: </label>&emsp;&emsp;
+    <input type="radio" name="cond" value="New">New
+    <input type="radio" name="cond" value="Second">Second
+    <br>
+    <br>
+    <label>Warehoure:</label>&emsp;
+    <select id="ware">
+        <option value="JAKARTA">JAKARTA</option>
+        <option value="BANDUNG">BANDUNG</option>
+        <option value="SEMARANG">SEMARANG</option>
+        <option value="SURABAYA">SURABAYA</option>
+    </select>
+    <br>
+    <br>
+    <label>Courier: </label>&emsp;&emsp;
+    <input name="cour" type="checkbox" value="JNE">JNE
+    <input name="cour" type="checkbox" value="NINJA Express">NINJA Express
+    <input name="cour" type="checkbox" value="J&T">J&T
+    <br>
+    <br>
+    <button onclick="showResult()">Clik Here</button>
+    <label id="result">Result</label>
+
+</body>
+<script>
+    let showResult = () => {
+        let name = document.getElementById('name').value
+        let price = parseInt(document.getElementById('price').value)
+        console.log(name)
+        alert(name)
+        console.log(price)
+        alert(price)
+
+
+        let condition
+        document.getElementsByName(`cond`).forEach(item => {
+            if (item.checked === true) {
+                condition = item.value
+            }
+        })
+        let ware = document.getElementById(`ware`).value
+
+        let cour = " "
+        document.getElementsByName(`cour`).forEach(item => {
+            console.log(document.getElementById)
+            if (item.checked === true) {
+                cour += item.value + ' '
+            }
+        })
+            // console.log(name, price, condition, ware, cour)
+        // console.log(condition)
+        // console.log(name,price)
+        
+    }
+</script>
+</html>
